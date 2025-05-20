@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Split File Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Split File Tool</h1>
+
+    <!-- SPLIT TXT -->
+    <h2>Split TXT</h2>
+    <input type="file" id="txtFileInput"><br>
+    <label>Jumlah nomor per file:</label>
+    <input type="number" id="numbersPerFile" placeholder="Misal 50"><br>
+    <label>Nama file dasar (opsional):</label>
+    <input type="text" id="txtSplitFileNameInput" placeholder="Contoh: list"><br>
+    <button id="splitTxtButton">Split TXT</button>
+    <div id="txtSplitFiles"></div>
+    <hr>
+
+    <!-- VCF to TXT -->
+    <h2>VCF to TXT</h2>
+    <input type="file" id="vcfFileInput" accept=".vcf"><br>
+    <button id="vcfToTxtButton">Convert</button>
+    <div id="vcfToTxtOutput"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
