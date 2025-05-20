@@ -1,37 +1,66 @@
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
-    max-width: 600px;
-    margin: auto;
     background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
 }
 
-h1, h2 {
-    color: #333;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-input, button {
-    margin-top: 5px;
-    margin-bottom: 15px;
-    padding: 8px;
+h1 {
+    text-align: center;
+}
+
+input[type="file"],
+input[type="text"],
+select,
+input[type="number"] {
     width: 100%;
-    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 button {
-    cursor: pointer;
-    background-color: #2d89ef;
+    background-color: #5cb85c;
     color: white;
+    padding: 10px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
 }
 
 button:hover {
-    background-color: #1e5aad;
+    background-color: #4cae4c;
 }
 
-#txtSplitFiles a, #vcfToTxtOutput a {
-    display: block;
-    margin-bottom: 5px;
-    color: #0066cc;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+}
+
+.header-row {
+    background-color: #f2f2f2;
 }
