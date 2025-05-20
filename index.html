@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Split File Tool</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VCF Split and Convert</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Split File Tool</h1>
+    <div class="container">
+        <h1>VCF Splitter & Converter</h1>
 
-    <!-- SPLIT TXT -->
-    <h2>Split TXT</h2>
-    <input type="file" id="txtFileInput"><br>
-    <label>Jumlah nomor per file:</label>
-    <input type="number" id="numbersPerFile" placeholder="Misal 50"><br>
-    <label>Nama file dasar (opsional):</label>
-    <input type="text" id="txtSplitFileNameInput" placeholder="Contoh: list"><br>
-    <button id="splitTxtButton">Split TXT</button>
-    <div id="txtSplitFiles"></div>
-    <hr>
+        <!-- Section untuk Memecah TXT -->
+        <div class="section">
+            <h2>Split TXT</h2>
+            <input type="file" id="txtFileInput" accept=".txt" />
+            <input type="number" id="contactsPerFile" placeholder="Contacts per file" />
+            <label for="startNumberInput">Nomor Awal:</label>
+            <input type="number" id="startNumberInput" value="1" min="1" />
+            <input type="text" id="splitFileNameInput" placeholder="File name" />
+            <input type="text" id="additionalFileNameInput" placeholder="Additional file name" />
+            <button id="splitButton">Split TXT</button>
+            <div id="splitTxtFiles"></div>
+        </div>
 
-    <!-- VCF to TXT -->
-    <h2>VCF to TXT</h2>
-    <input type="file" id="vcfFileInput" accept=".vcf"><br>
-    <button id="vcfToTxtButton">Convert</button>
-    <div id="vcfToTxtOutput"></div>
-
+        <!-- Section untuk Mengonversi VCF ke TXT -->
+        <div class="section">
+            <h2>Convert VCF to TXT</h2>
+            <input type="file" id="vcfFileInputTxt" accept=".vcf" />
+            <textarea id="outputTextArea" placeholder="Phone numbers will appear here..." readonly></textarea>
+            <input type="text" id="outputFileNameInput" placeholder="Output file name" />
+            <button id="convertButton">Convert to TXT</button>
+            <div id="txtDownloadLink"></div>
+            <p id="totalContacts">Total contacts: 0</p>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
